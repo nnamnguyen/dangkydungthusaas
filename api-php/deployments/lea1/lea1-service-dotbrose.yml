@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service-loadbalancer-lea1
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginxx-lea1
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
